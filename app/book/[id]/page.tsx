@@ -6,10 +6,13 @@ import { redirect } from "next/navigation";
 // display selected flight and create booking
 export default async function BookPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ id: string }>;
+  searchParams: Promise<{ error?: string }>;
 }) {
   const { id } = await params; // get flight ID from URL
+  const { error } = await searchParams;
   // connect to MongoDB database
   const client = await clientPromise;
   const db = client.db("airline-booking");
@@ -45,8 +48,8 @@ export default async function BookPage({
     });
      // prevent booking if flight is already full
     if (activeBookings >= schedule.capacity) {
-      throw new Error("This flight is full");
-    }
+  redirect(`/book/${id}?error=full`);
+     }
       // generate booking reference number
     const bookingRef =
       "DF-" + Math.random().toString(36).substring(2, 8).toUpperCase();
@@ -92,6 +95,11 @@ export default async function BookPage({
             <strong>Price:</strong> ${flight.price}
           </p>
         </div>
+          {error === "full" && (
+            <div className="mb-6 rounded-lg bg-red-100 p-4 text-red-700">
+              This flight is fully booked. Please select another flight.
+            </div>
+          )}
           {/*booking form*/}
         <form action={createBooking} className="space-y-4">
           <div>

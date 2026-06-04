@@ -29,6 +29,12 @@ export default async function ConfirmationPage({
         <p className="mb-6 text-slate-600">
           Your booking has been created successfully.
         </p>
+        <div className="mb-6 rounded-xl border border-amber-300 bg-amber-50 p-4 text-amber-900">
+          <p className="font-semibold">Important Information</p>
+          <p className="mt-1">Please take a photo or save your booking reference number for future use.
+            You will need your booking reference and email address to view or manage
+            your booking.</p>
+        </div>
           {/* Booking details */}
         <div className="space-y-3 rounded-xl border p-5 text-slate-800">
           <p>
