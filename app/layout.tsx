@@ -19,7 +19,7 @@ export default function RootLayout({
             {/* Logo */}
             <Link
               href="/"
-              className="text-2xl font-bold tracking-tight text-blue-700"
+              className="text-2xl font-bold tracking-tight text-[#0f3460]"
             >
               Dairy Flat Air
             </Link>
@@ -28,21 +28,21 @@ export default function RootLayout({
             <div className="flex gap-2 text-sm font-bold">
               <Link
                 href="/"
-                className="rounded-lg px-3 py-2 text-slate-800 transition-colors hover:bg-blue-50 hover:text-blue-700"
+                className="rounded-lg px-3 py-2 text-slate-800 transition-colors hover:bg-[#efc07b]/20 hover:text-[#0f3460]"
               >
                 Home
               </Link>
 
               <Link
                 href="/search"
-                className="rounded-lg px-3 py-2 text-slate-800 transition-colors hover:bg-blue-50 hover:text-blue-700"
+                className="rounded-lg px-3 py-2 text-slate-800 transition-colors hover:bg-[#efc07b]/20 hover:text-[#0f3460]"
               >
                 Search Flights
               </Link>
 
               <Link
                 href="/bookings"
-                className="rounded-lg px-3 py-2 text-slate-800 transition-colors hover:bg-blue-50 hover:text-blue-700"
+                className="rounded-lg px-3 py-2 text-slate-800 transition-colors hover:bg-[#efc07b]/20 hover:text-[#0f3460]"
               >
                 Passenger Bookings
               </Link>

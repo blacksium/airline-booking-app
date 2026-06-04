@@ -79,7 +79,7 @@ export default function Home() {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/search"
-                className="rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white shadow hover:bg-blue-700"
+                className="rounded-xl bg-[#0f3460] px-6 py-3 font-semibold text-white shadow hover:bg-[#0f3460]/80"
               >
                 Search Flights
               </Link>
@@ -95,38 +95,50 @@ export default function Home() {
         </div>
 
         <div className="mt-8 grid gap-6 md:grid-cols-3">
-          <div className="rounded-3xl bg-white p-7 shadow-lg">
+          <div className="rounded-3xl bg-white p-7 shadow-lg border-t-4 border-[#0f3460]">
             <div className="mb-4 text-3xl">✈️</div>
-            <h2 className="mb-2 text-xl font-bold text-slate-900">
-              Search Flights
+            <h2 className="mb-2 text-xl font-bold text-slate-[#0f3460]">
+              Sydeny Weekend Special
             </h2>
             <p className="text-slate-600">
-              Find flights by origin, destination, and date range.
+              Fly from Diary Flat to Sydney
+              <br />
+              From $1200
+              <br />
+              Available every Friday
             </p>
           </div>
 
-          <div className="rounded-3xl bg-white p-7 shadow-lg">
-            <div className="mb-4 text-3xl">🎫</div>
-            <h2 className="mb-2 text-xl font-bold text-slate-900">
-              Make A Trip
+          <div className="rounded-3xl bg-white p-7 shadow-lg border-t-4 border-[#0f3460]">
+            <div className="mb-4 text-3xl">🏝</div>
+            <h2 className="mb-2 text-xl font-bold text-slate-[#0f3460]">
+              Greate Barrier Island Escape
             </h2>
             <p className="text-slate-600">
-              Select a scheduled flight and receive a booking reference.
+              Private regional flights
+               <br />
+              From $220
+                <br />
+              Available Monday, Wednesday, Friday
             </p>
           </div>
 
-          <div className="rounded-3xl bg-white p-7 shadow-lg">
-            <div className="mb-4 text-3xl">📋</div>
-            <h2 className="mb-2 text-xl font-bold text-slate-900">
-              Manage Booking
+          <div className="rounded-3xl bg-white p-7 shadow-lg border-t-4 border-[#0f3460]">
+            <div className="mb-4 text-3xl">❄️</div>
+            <h2 className="mb-2 text-xl font-bold text-slate-[#0f3460]">
+              Lake Tekapo Scenic Flight
             </h2>
             <p className="text-slate-600">
-              Search or cancel bookings by booking reference and email.
+              Explore New Zealand's stunning South Island
+              <br />
+              From $500
+              <br />
+              Available Monday
             </p>
           </div>
         </div>
 
-        <section className="mt-10 rounded-3xl bg-white p-8 shadow-lg">
+        <section className="mt-10 rounded-3xl bg-white p-8 shadow-lg border-t-4 border-[#0f3460]">
           <h2 className="mb-2 text-3xl font-bold text-slate-900">
             Weekly Flight Schedule
           </h2>
@@ -159,7 +171,7 @@ export default function Home() {
                     <td className="py-4 text-slate-700">
                       {item.seats} passengers
                     </td>
-                    <td className="py-4 font-bold text-green-700">
+                    <td className="py-4 font-bold text-[#efc07b]">
                       ${item.price}
                     </td>
                   </tr>

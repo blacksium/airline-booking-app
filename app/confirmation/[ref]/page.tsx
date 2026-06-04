@@ -22,8 +22,8 @@ export default async function ConfirmationPage({
   return (
     <main className="min-h-screen bg-slate-100 p-8">
       <div className="mx-auto max-w-2xl rounded-2xl bg-white p-8 shadow">
-        <h1 className="mb-4 text-3xl font-bold text-green-700"> {/* Confirmation heading */}
-          Booking Confirmed
+        <h1 className="mb-4 text-3xl font-bold text-[#0f3460]"> {/* Confirmation heading */}
+          Booking Confirmed!
         </h1>
          {/* Confirmation message */}
         <p className="mb-6 text-slate-600">
@@ -36,8 +36,8 @@ export default async function ConfirmationPage({
             your booking.</p>
         </div>
           {/* Booking details */}
-        <div className="space-y-3 rounded-xl border p-5 text-slate-800">
-          <p>
+        <div className="space-y-3 rounded-xl border-[#efc07b] p-5 text-slate-800">
+          <p className ="text-lg font-bold text-[#efc07b]">
             <strong>Booking Reference:</strong> {booking.bookingRef}
           </p>
           <p>
